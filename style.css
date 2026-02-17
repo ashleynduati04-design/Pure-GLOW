@@ -1,3 +1,5 @@
+/* styles.css - Pure GLOW - Mobile Optimized & Fully Responsive */
+
 /* Reset & Base */
 * {
     margin: 0;
@@ -24,13 +26,13 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
+/* ── Header ── */
 header {
     background-color: rgba(232, 245, 232, 0.92);
     padding: 12px 0;
     border-bottom: 1px solid #c3e6cb;
     position: relative;
-    z-index: 100;
+    z-index: 10000;           /* stays above sidebar when open */
 }
 
 .header-inner {
@@ -50,7 +52,7 @@ header p {
     font-style: italic;
 }
 
-/* Hamburger */
+/* ── Hamburger Menu ── */
 .hamburger {
     display: none;
     background: none;
@@ -79,7 +81,7 @@ header p {
     }
 }
 
-/* Sidebar */
+/* ── Sidebar / Navigation ── */
 .sidebar {
     background-color: #d4e4d4;
     padding: 20px 15px;
@@ -112,7 +114,7 @@ header p {
     color: #70b870;
 }
 
-/* Hero */
+/* ── Hero Section ── */
 .hero {
     background: rgba(232, 245, 232, 0.6) url("images/Background.jpg") center/cover no-repeat;
     text-align: center;
@@ -149,7 +151,7 @@ header p {
     transform: translateY(-2px);
 }
 
-/* Products */
+/* ── Products Section ── */
 .products {
     padding: 40px 0;
     background-color: rgba(114, 207, 150, 0.7);
@@ -201,7 +203,7 @@ header p {
     color: #6b7d6b;
 }
 
-/* About & Blog */
+/* ── About & Blog ── */
 .about, .blog {
     padding: 45px 0;
     background: rgba(255,255,255,0.65);
@@ -213,7 +215,7 @@ header p {
     max-width: 100%;
 }
 
-/* Contact */
+/* ── Contact Section ── */
 .contact {
     padding: 50px 0;
     background: rgba(255, 255, 255, 0.75);
@@ -307,7 +309,7 @@ header p {
     color: #6b9e78;
 }
 
-/* Footer */
+/* ── Footer ── */
 footer {
     background-color: #4a704e;
     color: white;
@@ -316,7 +318,7 @@ footer {
     margin-top: auto;
 }
 
-/* ── DESKTOP ── */
+/* ── DESKTOP LAYOUT (≥ 768px) ── */
 @media (min-width: 768px) {
     .wrapper {
         grid-template-columns: 220px 1fr;
@@ -333,6 +335,7 @@ footer {
         top: 0;
         height: 100vh;
         overflow-y: auto;
+        transform: none !important; /* reset mobile transform */
     }
 
     main {
@@ -359,6 +362,12 @@ footer {
     .form-row {
         flex-direction: row;
     }
+
+    .contact-form {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 40px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -375,19 +384,20 @@ footer {
     }
 }
 
-/* ── Mobile Sidebar Overlay ── */
+/* ── MOBILE SIDEBAR (slide-in overlay) ── */
 @media (max-width: 767px) {
     .sidebar {
         position: fixed;
-        top: 0;
-        left: 0;
+        inset: 0 auto 0 0;
         width: 280px;
         height: 100%;
         transform: translateX(-100%);
-        z-index: 999;
+        transition: transform 0.35s ease;
+        z-index: 9999;
         background-color: #d4e4d4;
-        padding: 80px 20px 20px;
+        padding: 70px 20px 20px;
         overflow-y: auto;
+        box-shadow: 3px 0 20px rgba(0,0,0,0.15);
     }
 
     .sidebar.active {
@@ -401,14 +411,22 @@ footer {
     .hero h2 {
         font-size: 1.9em;
     }
+
+    .hero p {
+        font-size: 1em;
+    }
 }
 
-/* Smooth scroll & focus styles */
+/* ── Smooth scrolling & accessibility ── */
 html {
     scroll-behavior: smooth;
 }
 
-a:focus, button:focus {
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
     outline: 3px solid #6b9e78;
     outline-offset: 3px;
 }
