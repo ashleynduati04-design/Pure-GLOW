@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure GLOW - Organic Beauty Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container header-inner">
+                <img src="images/Logo for PureGlow Organic Beauty Products.png" alt="Pure GLOW Logo" class="logo">
+                <p>Organic Beauty Products</p>
+            </div>
+        </header>
+
+        <nav class="sidebar">
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="home" class="hero">
+                <div class="container">
+                    <h2>Welcome to Pure GLOW</h2>
+                    <p>Nourish your skin and hair naturally with pure, organic ingredients.</p>
+                    <a href="#shop" class="cta-button">Discover Products</a>
+                </div>
+            </section>
+
+            <section id="shop" class="products">
+                <div class="container">
+                    <h2>Featured Products</h2>
+                    <div class="product-grid">
+                        <article>
+                            <img src="images/Hair Oil.jpg" alt="Organic Hair Oil">
+                            <h3>Organic Hair Oil</h3>
+                            <p>Deep nourishment for shine & strength.</p>
+                        </article>
+                        <article>
+                            <img src="images/Body Lotion.jpg" alt="Organic Body Lotion">
+                            <h3>Body Lotion</h3>
+                            <p>Hydration without harmful chemicals.</p>
+                        </article>
+                        <article>
+                            <img src="images/Health Supplements.jpg" alt="Organic Face Serum">
+                            <h3>Face Serum</h3>
+                            <p>Glow-enhancing botanical blend.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about">
+                <div class="container">
+                    <h2>About Pure GLOW</h2>
+                    <p>Pure GLOW is a Nairobi-based organic beauty brand dedicated to helping people achieve healthy, radiant skin and hair using only pure, natural ingredients. Frustrated by the widespread use of harsh chemicals, misleading “natural” claims, and products that cause more harm than good, we set out to create trustworthy, effective alternatives. Every Pure GLOW product is made with certified organic ingredients; many sourced from local Kenyan farms and is completely free from parabens, sulfates, synthetic fragrances, and animal testing.</p>
+                    
+                    <p>Our mission is to make clean, high-quality organic beauty accessible and enjoyable for modern Kenyans and beyond. Through this website, we aim to drive online sales of our carefully crafted hair and body products while building long-term trust by sharing transparent ingredient information, educational content, and real self-care inspiration. At Pure GLOW, beauty means purity, simplicity, and a natural glow you can feel proud of inside and out.</p>
+                </div>
+            </section>
+
+            <section id="blog" class="blog">
+                <div class="container">
+                    <h2>Beauty & Wellness Blog</h2>
+                    <p>At Pure GLOW, we believe true beauty starts from knowledge and care — not just products. Our blog is your go-to resource for practical tips, science-backed insights, and simple routines to nurture your hair and skin naturally. From understanding why switching to organic ingredients can reduce irritation and boost long-term glow, to discovering easy DIY masks using kitchen staples, we share honest advice to help busy Kenyans achieve healthier, more radiant beauty without harmful chemicals or complicated steps.</p>
+                    
+                    <p>Whether you're dealing with dry hair in Nairobi's weather, seeking gentle skincare for sensitive skin, or simply wanting to live more sustainably, you'll find inspiration here. Explore our latest posts on seasonal hair care, the real benefits of certified organic botanicals, natural remedies for common concerns, and wellness habits that support inner and outer radiance. Join our community; read, try, and glow with confidence.</p>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <div class="container">
+                    <h2>Get in Touch</h2>
+
+                    <div class="contact-intro">
+                        <p>We’d love to hear from you! Whether you have questions about our organic ingredients, need help choosing the perfect product for your skin or hair type, or want to share your Pure GLOW experience — our team is here to assist.</p>
+                        <p>We usually respond within 24 hours.</p>
+                        <p class="contact-info">
+                            Email: <strong>pureglow@gmail.com</strong><br>
+                            Call / WhatsApp: <strong>+254 751 734579</strong>
+                        </p>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="Your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject <span class="required">*</span></label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Please select...</option>
+                                <option value="product-question">Product Question</option>
+                                <option value="order-support">Order / Delivery Support</option>
+                                <option value="general-inquiry">General Inquiry</option>
+                                <option value="feedback">Feedback / Suggestion</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required placeholder="How can we help you today?"></textarea>
+                        </div>
+
+                        <button type="submit" class="cta-button form-submit">Send Message</button>
+                    </form>
+
+                    <div class="contact-extra">
+                        <p>Follow us for tips, updates & glow inspiration:</p>
+                        
+                        <div class="icon">
+             <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+             <a href="https://www.instagram.com/flowers_by_gracie?igsh=cXkyZDBnbWQ0dnJq"><ion-icon name="logo-instagram"></ion-icon></a>
+             <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+             <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+             <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>© 2026 Pure GLOW. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
