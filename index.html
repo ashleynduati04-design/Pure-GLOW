@@ -13,6 +13,12 @@
             <div class="container header-inner">
                 <img src="images/Logo for PureGlow Organic Beauty Products.png" alt="Pure GLOW Logo" class="logo">
                 <p>Organic Beauty Products</p>
+                
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </header>
 
@@ -51,7 +57,7 @@
                         </article>
                         <article>
                             <img src="images/Health Supplements.jpg" alt="Organic Face Serum">
-                            <h3>Health Supplements</h3>
+                            <h3>Face Serum</h3>
                             <p>Glow-enhancing botanical blend.</p>
                         </article>
                     </div>
@@ -89,7 +95,6 @@
                         </p>
                     </div>
 
-                    <!-- Contact Form -->
                     <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
                         <div class="form-row">
                             <div class="form-group">
@@ -125,14 +130,13 @@
 
                     <div class="contact-extra">
                         <p>Follow us for tips, updates & glow inspiration:</p>
-                        
-                        <div class="icon">
-             <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-             <a href="https://www.instagram.com/flowers_by_gracie?igsh=cXkyZDBnbWQ0dnJq"><ion-icon name="logo-instagram"></ion-icon></a>
-             <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-             <a href="#"><ion-icon name="logo-google"></ion-icon></a>
-             <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
-
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a href="https://www.instagram.com/flowers_by_gracie?igsh=cXkyZDBnbWQ0dnJq" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="#" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a href="#" aria-label="Google"><ion-icon name="logo-google"></ion-icon></a>
+                            <a href="#" aria-label="Skype"><ion-icon name="logo-skype"></ion-icon></a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -144,7 +148,35 @@
             </div>
         </footer>
     </div>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-</body>
 
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Hamburger menu functionality -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const sidebar = document.querySelector('.sidebar');
+
+        hamburger.addEventListener('click', () => {
+            const isActive = sidebar.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isActive);
+        });
+
+        // Close on link click
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+                sidebar.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+</body>
 </html>
